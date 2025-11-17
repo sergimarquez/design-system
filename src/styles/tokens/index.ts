@@ -9,3 +9,4 @@ export * from "./typography";
 export * from "./border";
 export * from "./shadow";
 export * from "./z-index";
+export * from "../themes";
