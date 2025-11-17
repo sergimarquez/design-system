@@ -40,6 +40,7 @@ export default function Text({
         fontWeight,
         color: colorVar,
         lineHeight: typographyTokens.lineHeight.normal,
+        fontFamily: typographyTokens.fontFamily.sans,
         ...style,
       }}
     >

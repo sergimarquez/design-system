@@ -25,6 +25,7 @@ const preview: Preview = {
     },
   },
   tags: ["autodocs"],
+  globalTypes: {},
 };
 
 export default preview;
