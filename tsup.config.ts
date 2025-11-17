@@ -12,6 +12,9 @@ export default defineConfig({
   clean: true,
   treeshake: true,
   external: ["react", "react-dom"],
+  loader: {
+    ".css": "copy",
+  },
   outDir: "dist",
   esbuildOptions(options) {
     options.banner = {

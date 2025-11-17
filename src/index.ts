@@ -16,6 +16,6 @@ export * from "./primitives";
 // Export all tokens
 export * from "./styles/tokens";
 
-// Export CSS for token injection
-import "./styles/tokens.css";
+// Note: CSS tokens are available via '@sergi-marquez/design-system/styles'
+// Import them in your app: import '@sergi-marquez/design-system/styles';
 
