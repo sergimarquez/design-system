@@ -7,6 +7,8 @@ A modern, accessible design system built with React, TypeScript, and design toke
 - 🎨 **Design Tokens** - Framework-agnostic tokens (CSS custom properties + TypeScript constants)
 - ⚛️ **React Primitives** - Headless, accessible components built with React 18
 - 📖 **Storybook** - Interactive component documentation and playground
+- 🌐 **Demo Site** - Beautiful showcase site alongside Storybook
+- 🎨 **Themeable** - Customize colors via CSS variables or JavaScript API
 - ✅ **TypeScript** - Full type safety with strict mode
 - 🧪 **Testing** - Jest + React Testing Library
 - 📦 **Build System** - ESM + CJS + TypeScript declarations
@@ -248,6 +250,48 @@ typographyTokens.fontWeight.bold   // "700"
 typographyTokens.lineHeight.normal // "1.5"
 ```
 
+## Theme Customization
+
+The design system supports full theme customization through CSS custom properties or JavaScript API:
+
+**Method 1: CSS Variables**
+```css
+:root {
+  --color-interactive-default: #8b5cf6;
+  --color-background-primary: #ffffff;
+}
+```
+
+**Method 2: JavaScript API**
+```typescript
+import { applyTheme } from '@sergi-marquez/design-system/tokens';
+
+applyTheme({
+  interactive: { default: '#8b5cf6' },
+  background: { primary: '#ffffff' }
+});
+```
+
+See the Theme Customization example in Storybook for interactive theme picker.
+
+## Demo Site
+
+A beautiful showcase site is available to demonstrate the design system:
+
+```bash
+# Run demo site
+npm run demo
+
+# Build demo site
+npm run demo:build
+```
+
+The demo site includes:
+- Landing page with hero section
+- Component showcase with live previews
+- Examples section
+- Responsive design
+
 ## Accessibility
 
 All components are built with accessibility in mind:
@@ -291,8 +335,15 @@ npm run test:watch
 # Start Storybook
 npm run storybook
 
+# Start demo site
+npm run demo
+
 # Build library
 npm run build
+
+# Lint and format code
+npm run lint
+npm run format
 ```
 
 ## Linking Locally

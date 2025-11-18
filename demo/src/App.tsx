@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button, Card, Text, Stack, Badge, Grid, Link } from "@sergi-marquez/design-system";
 import HeroSection from "./components/HeroSection";
 import FeaturesSection from "./components/FeaturesSection";
