@@ -39,7 +39,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\""
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "prepare": "husky"
   },
   "keywords": [
     "design-system",
@@ -87,6 +88,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "prettier": "^3.4.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
     "jest-environment-jsdom": "^29.7.0",
     "storybook": "^8.4.5",
     "ts-jest": "^29.2.5",
@@ -99,4 +102,3 @@
     "node": ">=18.0.0"
   }
 }
-
