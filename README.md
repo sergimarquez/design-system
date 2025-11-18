@@ -32,18 +32,20 @@ pnpm add @sergi-marquez/design-system
 1. Import the CSS tokens in your application root:
 
 ```tsx
-import '@sergi-marquez/design-system/styles';
+import "@sergi-marquez/design-system/styles";
 ```
 
 2. Import and use components:
 
 ```tsx
-import { Button, Text, Card } from '@sergi-marquez/design-system';
+import { Button, Text, Card } from "@sergi-marquez/design-system";
 
 function App() {
   return (
     <Card>
-      <Text size="xl" weight="bold">Welcome</Text>
+      <Text size="xl" weight="bold">
+        Welcome
+      </Text>
       <Button variant="primary">Get Started</Button>
     </Card>
   );
@@ -63,7 +65,7 @@ This allows tokens to work in both CSS and JavaScript/TypeScript contexts while 
 
 ```typescript
 // TypeScript usage
-import { spacingTokens, colorTokens } from '@sergi-marquez/design-system';
+import { spacingTokens, colorTokens } from "@sergi-marquez/design-system";
 
 const padding = spacingTokens[4]; // "1rem"
 const primaryColor = colorTokens.interactive.default; // CSS var reference
@@ -118,6 +120,7 @@ import { Button } from '@sergi-marquez/design-system';
 ```
 
 **Props:**
+
 - `variant`: `"primary" | "secondary" | "ghost"`
 - `size`: `"sm" | "md" | "lg"`
 - Standard button HTML attributes
@@ -133,6 +136,7 @@ import { Text } from '@sergi-marquez/design-system';
 ```
 
 **Props:**
+
 - `as`: HTML element type
 - `size`: Typography scale size
 - `weight`: Font weight
@@ -141,34 +145,34 @@ import { Text } from '@sergi-marquez/design-system';
 ### Card
 
 ```tsx
-import { Card } from '@sergi-marquez/design-system';
+import { Card } from "@sergi-marquez/design-system";
 
 <Card padding={6} shadow="lg">
   Card content
-</Card>
+</Card>;
 ```
 
 ### Stack
 
 ```tsx
-import { Stack } from '@sergi-marquez/design-system';
+import { Stack } from "@sergi-marquez/design-system";
 
 <Stack direction="column" gap={4}>
   <Button>First</Button>
   <Button>Second</Button>
-</Stack>
+</Stack>;
 ```
 
 ### Grid
 
 ```tsx
-import { Grid } from '@sergi-marquez/design-system';
+import { Grid } from "@sergi-marquez/design-system";
 
 <Grid cols={3} gap={4}>
   <Card>Item 1</Card>
   <Card>Item 2</Card>
   <Card>Item 3</Card>
-</Grid>
+</Grid>;
 ```
 
 ### Input
@@ -192,13 +196,13 @@ import { Badge } from '@sergi-marquez/design-system';
 ### Modal
 
 ```tsx
-import { Modal } from '@sergi-marquez/design-system';
+import { Modal } from "@sergi-marquez/design-system";
 
 const [isOpen, setIsOpen] = useState(false);
 
 <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Title">
   Modal content
-</Modal>
+</Modal>;
 ```
 
 ### Link
@@ -217,12 +221,12 @@ import { Link } from '@sergi-marquez/design-system';
 Based on a 4px/8px scale:
 
 ```typescript
-import { spacingTokens } from '@sergi-marquez/design-system';
+import { spacingTokens } from "@sergi-marquez/design-system";
 
-spacingTokens[0]  // "0"
-spacingTokens[1]  // "0.25rem" (4px)
-spacingTokens[4]  // "1rem" (16px)
-spacingTokens[8]  // "2rem" (32px)
+spacingTokens[0]; // "0"
+spacingTokens[1]; // "0.25rem" (4px)
+spacingTokens[4]; // "1rem" (16px)
+spacingTokens[8]; // "2rem" (32px)
 ```
 
 ### Colors
@@ -230,12 +234,12 @@ spacingTokens[8]  // "2rem" (32px)
 Semantic color system:
 
 ```typescript
-import { colorTokens } from '@sergi-marquez/design-system';
+import { colorTokens } from "@sergi-marquez/design-system";
 
-colorTokens.background.primary
-colorTokens.foreground.primary
-colorTokens.interactive.default
-colorTokens.status.success
+colorTokens.background.primary;
+colorTokens.foreground.primary;
+colorTokens.interactive.default;
+colorTokens.status.success;
 ```
 
 ### Typography
@@ -243,11 +247,11 @@ colorTokens.status.success
 Font sizes, weights, and line heights:
 
 ```typescript
-import { typographyTokens } from '@sergi-marquez/design-system';
+import { typographyTokens } from "@sergi-marquez/design-system";
 
-typographyTokens.fontSize.base     // "1rem"
-typographyTokens.fontWeight.bold   // "700"
-typographyTokens.lineHeight.normal // "1.5"
+typographyTokens.fontSize.base; // "1rem"
+typographyTokens.fontWeight.bold; // "700"
+typographyTokens.lineHeight.normal; // "1.5"
 ```
 
 ## Theme Customization
@@ -255,6 +259,7 @@ typographyTokens.lineHeight.normal // "1.5"
 The design system supports full theme customization through CSS custom properties or JavaScript API:
 
 **Method 1: CSS Variables**
+
 ```css
 :root {
   --color-interactive-default: #8b5cf6;
@@ -263,12 +268,13 @@ The design system supports full theme customization through CSS custom propertie
 ```
 
 **Method 2: JavaScript API**
+
 ```typescript
-import { applyTheme } from '@sergi-marquez/design-system/tokens';
+import { applyTheme } from "@sergi-marquez/design-system/tokens";
 
 applyTheme({
-  interactive: { default: '#8b5cf6' },
-  background: { primary: '#ffffff' }
+  interactive: { default: "#8b5cf6" },
+  background: { primary: "#ffffff" },
 });
 ```
 
@@ -287,6 +293,7 @@ npm run demo:build
 ```
 
 The demo site includes:
+
 - Landing page with hero section
 - Component showcase with live previews
 - Examples section
@@ -306,6 +313,7 @@ All components are built with accessibility in mind:
 ### Testing Accessibility
 
 Use Storybook's accessibility addon or tools like:
+
 - [axe DevTools](https://www.deque.com/axe/devtools/)
 - [WAVE](https://wave.webaim.org/)
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/)
@@ -345,6 +353,29 @@ npm run build
 npm run lint
 npm run format
 ```
+
+## CI/CD Pipeline
+
+The project uses GitHub Actions for continuous integration and deployment:
+
+- **CI** - Runs on every push and PR:
+  - Linting and type checking
+  - Format verification
+  - Full test suite with coverage
+  - Library build verification
+  - Storybook and demo site builds
+
+- **Release** - Automatically publishes to NPM when tags are pushed:
+  - Runs full test suite
+  - Builds the library
+  - Publishes to NPM
+  - Creates GitHub release
+
+- **Deploy** - Automatically deploys documentation:
+  - Storybook deployed to GitHub Pages
+  - Demo site deployed alongside Storybook
+
+Workflows are located in `.github/workflows/`.
 
 ## Linking Locally
 
@@ -396,4 +427,3 @@ This is a personal design system portfolio project. Contributions and feedback a
 ## License
 
 MIT © Sergi Marquez
-

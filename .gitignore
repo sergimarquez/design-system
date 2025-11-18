@@ -46,3 +46,6 @@ pnpm-debug.log*
 
 # Storybook
 storybook-static/
+
+# GitHub Actions
+.github/workflows/.DS_Store
