@@ -1,15 +1,33 @@
 import { useState } from "react";
-import { Button, Card, Text, Stack, Badge, Input, Grid } from "@sergi-marquez/design-system";
+import {
+  Button,
+  Card,
+  Text,
+  Stack,
+  Badge,
+  Input,
+  Grid,
+} from "@sergi-marquez/design-system";
 
 export default function ComponentsShowcase() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
   const components = [
-    { name: "Button", variants: ["primary", "secondary", "ghost"], sizes: ["sm", "md", "lg"] },
-    { name: "Card", description: "Container component with shadows and padding" },
+    {
+      name: "Button",
+      variants: ["primary", "secondary", "ghost"],
+      sizes: ["sm", "md", "lg"],
+    },
+    {
+      name: "Card",
+      description: "Container component with shadows and padding",
+    },
     { name: "Text", description: "Typography component with flexible sizing" },
-    { name: "Badge", variants: ["default", "success", "error", "warning", "info"] },
+    {
+      name: "Badge",
+      variants: ["default", "success", "error", "warning", "info"],
+    },
     { name: "Input", description: "Form input with label and error states" },
     { name: "Stack", description: "Layout component for flexbox layouts" },
     { name: "Grid", description: "Grid layout component" },
@@ -30,8 +48,13 @@ export default function ComponentsShowcase() {
           <Text as="h2" size="4xl" weight="bold">
             Component Library
           </Text>
-          <Text size="lg" color="secondary" style={{ maxWidth: "600px", margin: "0 auto" }}>
-            Explore all available primitives. Each component is fully accessible and customizable.
+          <Text
+            size="lg"
+            color="secondary"
+            style={{ maxWidth: "600px", margin: "0 auto" }}
+          >
+            Explore all available primitives. Each component is fully accessible
+            and customizable.
           </Text>
         </Stack>
 
@@ -56,9 +79,15 @@ export default function ComponentsShowcase() {
                   <Button variant="ghost">Ghost</Button>
                 </Stack>
                 <Stack direction="row" gap={3} style={{ flexWrap: "wrap" }}>
-                  <Button variant="primary" size="sm">Small</Button>
-                  <Button variant="primary" size="md">Medium</Button>
-                  <Button variant="primary" size="lg">Large</Button>
+                  <Button variant="primary" size="sm">
+                    Small
+                  </Button>
+                  <Button variant="primary" size="md">
+                    Medium
+                  </Button>
+                  <Button variant="primary" size="lg">
+                    Large
+                  </Button>
                 </Stack>
               </Stack>
 
@@ -80,9 +109,13 @@ export default function ComponentsShowcase() {
                   type="email"
                   placeholder="you@example.com"
                   value={email}
-                  onChange={(e) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setEmail(e.target.value);
-                    setError(e.target.value && !/\S+@\S+\.\S+/.test(e.target.value) ? "Invalid email" : "");
+                    setError(
+                      e.target.value && !/\S+@\S+\.\S+/.test(e.target.value)
+                        ? "Invalid email"
+                        : ""
+                    );
                   }}
                   error={error}
                 />
@@ -141,4 +174,3 @@ export default function ComponentsShowcase() {
     </section>
   );
 }
-

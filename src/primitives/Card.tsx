@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, type CSSProperties, type HTMLAttributes } from "react";
 import { spacingTokens, borderTokens, shadowTokens } from "../styles/tokens";
 
 type CardProps = {
@@ -6,8 +6,9 @@ type CardProps = {
   as?: "div" | "article" | "section";
   padding?: keyof typeof spacingTokens;
   shadow?: keyof typeof shadowTokens;
-  className?: string;
-};
+} & Omit<HTMLAttributes<HTMLDivElement>, "style"> & {
+    style?: CSSProperties;
+  };
 
 export default function Card({
   children,
@@ -15,6 +16,8 @@ export default function Card({
   padding = 6,
   shadow = "base",
   className = "",
+  style,
+  ...props
 }: CardProps) {
   return (
     <Component
@@ -26,7 +29,9 @@ export default function Card({
         borderRadius: borderTokens.radius.xl,
         boxShadow: shadowTokens[shadow],
         transition: "all 0.2s ease",
+        ...style,
       }}
+      {...props}
     >
       {children}
     </Component>
