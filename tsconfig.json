@@ -28,7 +28,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist", ".storybook", "storybook-static"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "scripts/**/*.ts", "*.ts"],
+  "exclude": ["node_modules", "dist", ".storybook", "storybook-static", "demo"]
 }
-
