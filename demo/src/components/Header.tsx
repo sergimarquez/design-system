@@ -14,20 +14,40 @@ export default function Header() {
         boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1)",
       }}
     >
-      <Stack direction="row" gap={6} justify="space-between" align="center" style={{ maxWidth: "1400px", margin: "0 auto" }}>
+      <Stack
+        direction="row"
+        gap={6}
+        justify="space-between"
+        align="center"
+        style={{ maxWidth: "1400px", margin: "0 auto" }}
+      >
         <Link href="/" style={{ textDecoration: "none" }}>
-          <Text size="xl" weight="bold" style={{ color: "var(--color-foreground-primary)" }}>
+          <Text
+            size="xl"
+            weight="bold"
+            style={{ color: "var(--color-foreground-primary)" }}
+          >
             @sergi-marquez
           </Text>
         </Link>
         <Stack direction="row" gap={4} align="center">
-          <Link href="#components" style={{ textDecoration: "none", fontSize: "0.9375rem" }}>
+          <Link
+            href="#components"
+            style={{ textDecoration: "none", fontSize: "0.9375rem" }}
+          >
             Components
           </Link>
-          <Link href="#examples" style={{ textDecoration: "none", fontSize: "0.9375rem" }}>
+          <Link
+            href="#examples"
+            style={{ textDecoration: "none", fontSize: "0.9375rem" }}
+          >
             Examples
           </Link>
-          <Link href="https://github.com/sergimarquez/design-system" external style={{ textDecoration: "none", fontSize: "0.9375rem" }}>
+          <Link
+            href="https://github.com/sergimarquez/design-system"
+            external
+            style={{ textDecoration: "none", fontSize: "0.9375rem" }}
+          >
             GitHub
           </Link>
           <a href="/storybook" style={{ textDecoration: "none" }}>
@@ -40,4 +60,3 @@ export default function Header() {
     </header>
   );
 }
-

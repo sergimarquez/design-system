@@ -6,7 +6,18 @@ type TextWeight = keyof typeof typographyTokens.fontWeight;
 
 type TextProps = {
   children: ReactNode;
-  as?: "p" | "span" | "div" | "strong" | "em" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  as?:
+    | "p"
+    | "span"
+    | "div"
+    | "strong"
+    | "em"
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6";
   size?: TextSize;
   weight?: TextWeight;
   color?: "primary" | "secondary" | "muted";

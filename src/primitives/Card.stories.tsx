@@ -52,11 +52,8 @@ export const Article: Story = {
         <Text as="h2" size="xl" weight="bold">
           Article Title
         </Text>
-        <Text>
-          This is an article card with multiple text elements inside.
-        </Text>
+        <Text>This is an article card with multiple text elements inside.</Text>
       </>
     ),
   },
 };
-

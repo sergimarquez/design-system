@@ -1,5 +1,9 @@
 import { type ReactNode } from "react";
-import { spacingTokens, borderTokens, typographyTokens } from "../styles/tokens";
+import {
+  spacingTokens,
+  borderTokens,
+  typographyTokens,
+} from "../styles/tokens";
 
 type BadgeVariant = "default" | "success" | "warning" | "error" | "info";
 

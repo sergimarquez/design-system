@@ -49,4 +49,3 @@ export const Info: Story = {
     children: "Info",
   },
 };
-

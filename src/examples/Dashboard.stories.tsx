@@ -11,7 +11,12 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-const StatCard = ({ title, value, change, variant = "default" }: {
+const StatCard = ({
+  title,
+  value,
+  change,
+  variant = "default",
+}: {
   title: string;
   value: string;
   change?: string;
@@ -26,7 +31,15 @@ const StatCard = ({ title, value, change, variant = "default" }: {
         {value}
       </Text>
       {change && (
-        <Badge variant={variant === "success" ? "success" : variant === "error" ? "error" : "default"}>
+        <Badge
+          variant={
+            variant === "success"
+              ? "success"
+              : variant === "error"
+                ? "error"
+                : "default"
+          }
+        >
           {change}
         </Badge>
       )}
@@ -34,7 +47,11 @@ const StatCard = ({ title, value, change, variant = "default" }: {
   </Card>
 );
 
-const ActivityCard = ({ title, description, time }: {
+const ActivityCard = ({
+  title,
+  description,
+  time,
+}: {
   title: string;
   description: string;
   time: string;
@@ -58,15 +75,24 @@ const ActivityCard = ({ title, description, time }: {
 
 export const Dashboard: Story = {
   render: () => (
-    <div style={{ minHeight: "100vh", backgroundColor: "var(--color-background-secondary)" }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "var(--color-background-secondary)",
+      }}
+    >
       {/* Header */}
-      <div style={{ 
-        padding: "2rem 3rem",
-        borderBottom: "1px solid var(--color-border-default)",
-        backgroundColor: "var(--color-background-primary)"
-      }}>
+      <div
+        style={{
+          padding: "2rem 3rem",
+          borderBottom: "1px solid var(--color-border-default)",
+          backgroundColor: "var(--color-background-primary)",
+        }}
+      >
         <Stack direction="row" gap={4} justify="space-between" align="center">
-          <Text size="xl" weight="bold">Dashboard</Text>
+          <Text size="xl" weight="bold">
+            Dashboard
+          </Text>
           <Stack direction="row" gap={3}>
             <Button variant="secondary">Settings</Button>
             <Button variant="primary">New Project</Button>
@@ -97,10 +123,7 @@ export const Dashboard: Story = {
               change="-2.1%"
               variant="error"
             />
-            <StatCard
-              title="Pending Tasks"
-              value="23"
-            />
+            <StatCard title="Pending Tasks" value="23" />
           </Grid>
 
           {/* Two Column Layout */}
@@ -108,7 +131,12 @@ export const Dashboard: Story = {
             {/* Projects Section */}
             <Card padding={6}>
               <Stack gap={6}>
-                <Stack direction="row" gap={3} justify="space-between" align="center">
+                <Stack
+                  direction="row"
+                  gap={3}
+                  justify="space-between"
+                  align="center"
+                >
                   <Text as="h2" size="2xl" weight="semibold">
                     Recent Projects
                   </Text>
@@ -172,4 +200,3 @@ export const Dashboard: Story = {
     </div>
   ),
 };
-

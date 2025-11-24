@@ -63,7 +63,8 @@ export const ThemeCustomizer: Story = {
                   Theme Customization
                 </Text>
                 <Text color="secondary">
-                  Customize colors by overriding CSS custom properties or using the applyTheme function.
+                  Customize colors by overriding CSS custom properties or using
+                  the applyTheme function.
                 </Text>
               </Stack>
 
@@ -73,19 +74,39 @@ export const ThemeCustomizer: Story = {
                   Preset Themes
                 </Text>
                 <Stack direction="row" gap={3} style={{ flexWrap: "wrap" }}>
-                  <Button variant="primary" size="sm" onClick={() => handlePreset("default")}>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() => handlePreset("default")}
+                  >
                     Default
                   </Button>
-                  <Button variant="primary" size="sm" onClick={() => handlePreset("purple")}>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() => handlePreset("purple")}
+                  >
                     Purple
                   </Button>
-                  <Button variant="primary" size="sm" onClick={() => handlePreset("green")}>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() => handlePreset("green")}
+                  >
                     Green
                   </Button>
-                  <Button variant="primary" size="sm" onClick={() => handlePreset("orange")}>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() => handlePreset("orange")}
+                  >
                     Orange
                   </Button>
-                  <Button variant="primary" size="sm" onClick={() => handlePreset("dark")}>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() => handlePreset("dark")}
+                  >
                     Dark
                   </Button>
                   <Button variant="secondary" size="sm" onClick={resetTheme}>
@@ -189,7 +210,7 @@ export const ThemeCustomizer: Story = {
                     fontFamily: "var(--font-family-mono)",
                   }}
                 >
-{`import { applyTheme } from '@sergi-marquez/design-system/tokens';
+                  {`import { applyTheme } from '@sergi-marquez/design-system/tokens';
 
 // Apply custom theme
 applyTheme({
@@ -226,7 +247,8 @@ applyTheme({
                   <Badge variant="info">Info</Badge>
                 </Stack>
                 <Text>
-                  This text preview shows how your custom theme looks across different components.
+                  This text preview shows how your custom theme looks across
+                  different components.
                 </Text>
               </Stack>
             </Stack>
@@ -236,4 +258,3 @@ applyTheme({
     );
   },
 };
-

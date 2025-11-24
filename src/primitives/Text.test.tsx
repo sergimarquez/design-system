@@ -33,4 +33,3 @@ describe("Text", () => {
     expect(element).toHaveStyle({ color: "var(--color-foreground-muted)" });
   });
 });
-

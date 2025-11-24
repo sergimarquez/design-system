@@ -16,4 +16,3 @@ copyFileSync(
 );
 
 console.log("✓ CSS file copied to dist/styles.css");
-

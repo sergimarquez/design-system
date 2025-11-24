@@ -11,7 +11,7 @@ type LinkProps = {
 
 /**
  * Link component - Framework-agnostic link component
- * 
+ *
  * For internal navigation in Next.js, Remix, or other frameworks,
  * wrap this component or use your framework's Link component directly.
  */

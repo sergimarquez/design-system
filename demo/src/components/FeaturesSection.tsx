@@ -4,32 +4,38 @@ const features = [
   {
     icon: "🎨",
     title: "Design Tokens",
-    description: "Framework-agnostic tokens using CSS custom properties and TypeScript constants for maximum flexibility.",
+    description:
+      "Framework-agnostic tokens using CSS custom properties and TypeScript constants for maximum flexibility.",
   },
   {
     icon: "⚛️",
     title: "React Primitives",
-    description: "Headless, accessible components that work with any styling approach. Fully typed with TypeScript.",
+    description:
+      "Headless, accessible components that work with any styling approach. Fully typed with TypeScript.",
   },
   {
     icon: "✅",
     title: "Type Safety",
-    description: "Full type safety with strict TypeScript mode for better developer experience and fewer bugs.",
+    description:
+      "Full type safety with strict TypeScript mode for better developer experience and fewer bugs.",
   },
   {
     icon: "📦",
     title: "Build System",
-    description: "ESM + CJS + TypeScript declarations. Works with any modern bundler or framework.",
+    description:
+      "ESM + CJS + TypeScript declarations. Works with any modern bundler or framework.",
   },
   {
     icon: "♿",
     title: "Accessibility",
-    description: "WCAG compliant components with keyboard navigation, ARIA attributes, and screen reader support.",
+    description:
+      "WCAG compliant components with keyboard navigation, ARIA attributes, and screen reader support.",
   },
   {
     icon: "🎨",
     title: "Themeable",
-    description: "Easily customize colors and tokens through CSS variables or the applyTheme function.",
+    description:
+      "Easily customize colors and tokens through CSS variables or the applyTheme function.",
   },
 ];
 
@@ -47,8 +53,13 @@ export default function FeaturesSection() {
           <Text as="h2" size="4xl" weight="bold">
             Everything You Need
           </Text>
-          <Text size="lg" color="secondary" style={{ maxWidth: "600px", margin: "0 auto" }}>
-            A complete design system with all the primitives you need to build modern applications.
+          <Text
+            size="lg"
+            color="secondary"
+            style={{ maxWidth: "600px", margin: "0 auto" }}
+          >
+            A complete design system with all the primitives you need to build
+            modern applications.
           </Text>
         </Stack>
         <Grid cols={3} gap={6}>
@@ -62,11 +73,13 @@ export default function FeaturesSection() {
               }}
               onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
                 e.currentTarget.style.transform = "translateY(-4px)";
-                e.currentTarget.style.boxShadow = "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)";
+                e.currentTarget.style.boxShadow =
+                  "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)";
               }}
               onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
                 e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)";
+                e.currentTarget.style.boxShadow =
+                  "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)";
               }}
             >
               <Stack gap={4}>
@@ -87,4 +100,3 @@ export default function FeaturesSection() {
     </section>
   );
 }
-

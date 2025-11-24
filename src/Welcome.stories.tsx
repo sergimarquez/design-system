@@ -98,8 +98,9 @@ export const Welcome: Story = {
             Welcome to @sergi-marquez/design-system
           </Text>
           <Text size="xl" color="secondary">
-            A modern, accessible design system built with React, TypeScript, and design tokens.
-            Build consistent, accessible user interfaces with our collection of headless primitives.
+            A modern, accessible design system built with React, TypeScript, and
+            design tokens. Build consistent, accessible user interfaces with our
+            collection of headless primitives.
           </Text>
         </Stack>
 
@@ -109,7 +110,9 @@ export const Welcome: Story = {
               Key Features
             </Text>
             <Stack gap={3}>
-              <Text>🎨 Design Tokens - Framework-agnostic tokens (CSS + TypeScript)</Text>
+              <Text>
+                🎨 Design Tokens - Framework-agnostic tokens (CSS + TypeScript)
+              </Text>
               <Text>⚛️ React Primitives - Headless, accessible components</Text>
               <Text>✅ TypeScript - Full type safety with strict mode</Text>
               <Text>📦 Build System - ESM + CJS + TypeScript declarations</Text>
@@ -127,35 +130,39 @@ export const Welcome: Story = {
               <Text size="sm" color="muted">
                 Installation
               </Text>
-              <pre style={{ 
-                padding: "1rem", 
-                backgroundColor: "#f8f9fa", 
-                borderRadius: "0.375rem",
-                overflow: "auto",
-                fontSize: "0.875rem"
-              }}>
-{`npm install @sergi-marquez/design-system`}
+              <pre
+                style={{
+                  padding: "1rem",
+                  backgroundColor: "#f8f9fa",
+                  borderRadius: "0.375rem",
+                  overflow: "auto",
+                  fontSize: "0.875rem",
+                }}
+              >
+                {`npm install @sergi-marquez/design-system`}
               </pre>
               <Text size="sm" color="muted">
                 Usage
               </Text>
-              <pre style={{ 
-                padding: "1rem", 
-                backgroundColor: "#f8f9fa", 
-                borderRadius: "0.375rem",
-                overflow: "auto",
-                fontSize: "0.875rem"
-              }}>
-{`import '@sergi-marquez/design-system/styles';
+              <pre
+                style={{
+                  padding: "1rem",
+                  backgroundColor: "#f8f9fa",
+                  borderRadius: "0.375rem",
+                  overflow: "auto",
+                  fontSize: "0.875rem",
+                }}
+              >
+                {`import '@sergi-marquez/design-system/styles';
 import { Button, Text, Card } from '@sergi-marquez/design-system';`}
               </pre>
             </Stack>
           </Stack>
         </Card>
 
-        <a 
-          href="https://github.com/sergimarquez/design-system" 
-          target="_blank" 
+        <a
+          href="https://github.com/sergimarquez/design-system"
+          target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none" }}
         >
@@ -167,4 +174,3 @@ import { Button, Text, Card } from '@sergi-marquez/design-system';`}
     </div>
   ),
 };
-

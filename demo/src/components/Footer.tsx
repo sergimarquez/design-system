@@ -16,20 +16,30 @@ export default function Footer() {
             <Text weight="semibold">Design System</Text>
             <Stack gap={2}>
               <Text size="sm" color="secondary">
-                A modern, accessible design system built with React, TypeScript, and design tokens.
+                A modern, accessible design system built with React, TypeScript,
+                and design tokens.
               </Text>
             </Stack>
           </Stack>
           <Stack gap={3}>
             <Text weight="semibold">Resources</Text>
             <Stack gap={2}>
-              <Link href="#components" style={{ fontSize: "0.875rem", textDecoration: "none" }}>
+              <Link
+                href="#components"
+                style={{ fontSize: "0.875rem", textDecoration: "none" }}
+              >
                 Components
               </Link>
-              <Link href="#examples" style={{ fontSize: "0.875rem", textDecoration: "none" }}>
+              <Link
+                href="#examples"
+                style={{ fontSize: "0.875rem", textDecoration: "none" }}
+              >
                 Examples
               </Link>
-              <Link href="/storybook" style={{ fontSize: "0.875rem", textDecoration: "none" }}>
+              <Link
+                href="/storybook"
+                style={{ fontSize: "0.875rem", textDecoration: "none" }}
+              >
                 Storybook
               </Link>
             </Stack>
@@ -50,7 +60,12 @@ export default function Footer() {
             </Stack>
           </Stack>
         </Grid>
-        <div style={{ borderTop: "1px solid var(--color-border-default)", paddingTop: "2rem" }}>
+        <div
+          style={{
+            borderTop: "1px solid var(--color-border-default)",
+            paddingTop: "2rem",
+          }}
+        >
           <Text size="sm" color="muted" style={{ textAlign: "center" }}>
             Built with @sergi-marquez/design-system
           </Text>
@@ -59,4 +74,3 @@ export default function Footer() {
     </footer>
   );
 }
-

@@ -6,6 +6,5 @@ import "@sergi-marquez/design-system/styles/tokens.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
-

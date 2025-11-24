@@ -14,28 +14,31 @@
   /* Color Tokens */
   --color-background-primary: #ffffff;
   --color-background-secondary: #f8f9fa;
-  
+
   --color-foreground-primary: #1a1a1a;
   --color-foreground-secondary: #4a5568;
   --color-foreground-muted: #718096;
-  
+
   --color-border-default: #e2e8f0;
   --color-border-muted: #f1f5f9;
-  
+
   --color-interactive-default: #3b82f6;
   --color-interactive-hover: #2563eb;
   --color-interactive-active: #1d4ed8;
   --color-interactive-disabled: #94a3b8;
-  
+
   --color-status-success: #10b981;
   --color-status-warning: #f59e0b;
   --color-status-error: #ef4444;
   --color-status-info: #3b82f6;
 
   /* Typography Tokens */
-  --font-family-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas,
-    'Courier New', monospace;
+  --font-family-sans:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-mono:
+    "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New",
+    monospace;
 
   /* Z-Index Tokens (defined in TS for type safety, but available via CSS vars if needed) */
   --z-index-base: 0;
@@ -53,13 +56,12 @@
   :root {
     --color-background-primary: #1a1a1a;
     --color-background-secondary: #2d2d2d;
-    
+
     --color-foreground-primary: #ffffff;
     --color-foreground-secondary: #e2e8f0;
     --color-foreground-muted: #94a3b8;
-    
+
     --color-border-default: #374151;
     --color-border-muted: #4b5563;
   }
 }
-

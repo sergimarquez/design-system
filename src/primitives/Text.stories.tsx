@@ -8,11 +8,34 @@ const meta: Meta<typeof Text> = {
   argTypes: {
     as: {
       control: "select",
-      options: ["p", "span", "div", "strong", "em", "h1", "h2", "h3", "h4", "h5", "h6"],
+      options: [
+        "p",
+        "span",
+        "div",
+        "strong",
+        "em",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+      ],
     },
     size: {
       control: "select",
-      options: ["xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl"],
+      options: [
+        "xs",
+        "sm",
+        "base",
+        "lg",
+        "xl",
+        "2xl",
+        "3xl",
+        "4xl",
+        "5xl",
+        "6xl",
+      ],
     },
     weight: {
       control: "select",
@@ -63,4 +86,3 @@ export const Muted: Story = {
     children: "Muted text color",
   },
 };
-

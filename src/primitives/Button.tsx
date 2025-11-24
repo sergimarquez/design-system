@@ -1,5 +1,9 @@
 import { type ButtonHTMLAttributes, type ReactNode } from "react";
-import { spacingTokens, borderTokens, typographyTokens } from "../styles/tokens";
+import {
+  spacingTokens,
+  borderTokens,
+  typographyTokens,
+} from "../styles/tokens";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";

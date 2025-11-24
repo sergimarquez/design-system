@@ -11,7 +11,10 @@ export default function HeroSection() {
       }}
     >
       <Stack gap={6} align="center">
-        <Badge variant="info" style={{ fontSize: "0.875rem", padding: "0.5rem 1rem" }}>
+        <Badge
+          variant="info"
+          style={{ fontSize: "0.875rem", padding: "0.5rem 1rem" }}
+        >
           Design System v0.1.0
         </Badge>
         <Stack gap={4}>
@@ -20,7 +23,8 @@ export default function HeroSection() {
             size="6xl"
             weight="bold"
             style={{
-              background: "linear-gradient(135deg, var(--color-foreground-primary) 0%, var(--color-foreground-secondary) 100%)",
+              background:
+                "linear-gradient(135deg, var(--color-foreground-primary) 0%, var(--color-foreground-secondary) 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -29,12 +33,22 @@ export default function HeroSection() {
           >
             Build Beautiful Interfaces
           </Text>
-          <Text size="xl" color="secondary" style={{ maxWidth: "700px", margin: "0 auto", lineHeight: "1.6" }}>
-            A modern, accessible design system built with React, TypeScript, and design tokens.
-            Create consistent, beautiful user experiences with our collection of headless primitives.
+          <Text
+            size="xl"
+            color="secondary"
+            style={{ maxWidth: "700px", margin: "0 auto", lineHeight: "1.6" }}
+          >
+            A modern, accessible design system built with React, TypeScript, and
+            design tokens. Create consistent, beautiful user experiences with
+            our collection of headless primitives.
           </Text>
         </Stack>
-        <Stack direction="row" gap={3} justify="center" style={{ flexWrap: "wrap" }}>
+        <Stack
+          direction="row"
+          gap={3}
+          justify="center"
+          style={{ flexWrap: "wrap" }}
+        >
           <a href="#components" style={{ textDecoration: "none" }}>
             <Button variant="primary" size="lg">
               Explore Components
@@ -50,4 +64,3 @@ export default function HeroSection() {
     </section>
   );
 }
-

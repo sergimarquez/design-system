@@ -29,7 +29,12 @@ export default function Stack({
         display: "flex",
         flexDirection: direction,
         gap: spacingTokens[gap],
-        alignItems: align === "start" ? "flex-start" : align === "end" ? "flex-end" : align,
+        alignItems:
+          align === "start"
+            ? "flex-start"
+            : align === "end"
+              ? "flex-end"
+              : align,
         justifyContent:
           justify === "start"
             ? "flex-start"

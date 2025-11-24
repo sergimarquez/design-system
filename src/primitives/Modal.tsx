@@ -1,5 +1,10 @@
 import { type ReactNode, useEffect } from "react";
-import { spacingTokens, borderTokens, shadowTokens, zIndexTokens } from "../styles/tokens";
+import {
+  spacingTokens,
+  borderTokens,
+  shadowTokens,
+  zIndexTokens,
+} from "../styles/tokens";
 
 type ModalProps = {
   children: ReactNode;
@@ -8,7 +13,12 @@ type ModalProps = {
   title?: string;
 };
 
-export default function Modal({ children, isOpen, onClose, title }: ModalProps) {
+export default function Modal({
+  children,
+  isOpen,
+  onClose,
+  title,
+}: ModalProps) {
   // Close on Escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -26,7 +36,7 @@ export default function Modal({ children, isOpen, onClose, title }: ModalProps) 
 
     const modal = document.getElementById("modal-content");
     const focusableElements = modal?.querySelectorAll<HTMLElement>(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements?.[0];
     const lastElement = focusableElements?.[focusableElements.length - 1];

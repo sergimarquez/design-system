@@ -24,7 +24,11 @@ const ModalDemo = () => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Modal Title">
+      <Modal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Modal Title"
+      >
         <Stack gap={4}>
           <Text>This is the modal content. You can put anything here.</Text>
           <Button onClick={() => setIsOpen(false)}>Close</Button>
@@ -86,4 +90,3 @@ export const WithContent: Story = {
     );
   },
 };
-

@@ -1,5 +1,9 @@
 import { type InputHTMLAttributes, forwardRef } from "react";
-import { spacingTokens, borderTokens, typographyTokens } from "../styles/tokens";
+import {
+  spacingTokens,
+  borderTokens,
+  typographyTokens,
+} from "../styles/tokens";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
@@ -9,7 +13,13 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ label, error, className = "", ...props }, ref) => {
     return (
-      <div style={{ display: "flex", flexDirection: "column", gap: spacingTokens[2] }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: spacingTokens[2],
+        }}
+      >
         {label && (
           <label
             htmlFor={props.id}
@@ -35,14 +45,17 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             color: "var(--color-foreground-primary)",
             backgroundColor: "var(--color-background-primary)",
             border: `${borderTokens.width.base} solid ${
-              error ? "var(--color-status-error)" : "var(--color-border-default)"
+              error
+                ? "var(--color-status-error)"
+                : "var(--color-border-default)"
             }`,
             borderRadius: borderTokens.radius.md,
             outline: "none",
             transition: "border-color 0.2s ease",
           }}
           onFocus={(e) => {
-            e.currentTarget.style.borderColor = "var(--color-interactive-default)";
+            e.currentTarget.style.borderColor =
+              "var(--color-interactive-default)";
             props.onFocus?.(e);
           }}
           onBlur={(e) => {
@@ -66,7 +79,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         )}
       </div>
     );
-  },
+  }
 );
 
 Input.displayName = "Input";
