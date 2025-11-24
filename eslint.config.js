@@ -72,9 +72,21 @@ export default [
     },
   },
   {
+    files: ["**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off", // Tests may need any
+    },
+  },
+  {
     files: ["**/*.stories.{ts,tsx}"],
     rules: {
       "react-hooks/rules-of-hooks": "off", // Stories can use hooks in render functions
+      "react/no-unescaped-entities": "off", // Stories may contain quotes/apostrophes
     },
   },
   {
@@ -91,4 +103,3 @@ export default [
     ],
   },
 ];
-

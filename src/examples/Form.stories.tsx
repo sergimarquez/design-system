@@ -54,12 +54,15 @@ export const ContactForm: Story = {
               Contact Us
             </Text>
             <Text color="secondary">
-              Fill out the form below and we'll get back to you as soon as possible.
+              Fill out the form below and we&apos;ll get back to you as soon as
+              possible.
             </Text>
           </Stack>
 
           {submitted && (
-            <Badge variant="success">Thank you! Your message has been sent.</Badge>
+            <Badge variant="success">
+              Thank you! Your message has been sent.
+            </Badge>
           )}
 
           <form onSubmit={handleSubmit}>
@@ -67,7 +70,9 @@ export const ContactForm: Story = {
               <Input
                 label="Name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 error={errors.name}
                 placeholder="John Doe"
               />
@@ -76,12 +81,20 @@ export const ContactForm: Story = {
                 label="Email"
                 type="email"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 error={errors.email}
                 placeholder="john@example.com"
               />
 
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                }}
+              >
                 <label
                   htmlFor="message"
                   style={{
@@ -96,7 +109,9 @@ export const ContactForm: Story = {
                 <textarea
                   id="message"
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   placeholder="Your message here..."
                   style={{
                     padding: "0.75rem",
@@ -112,7 +127,8 @@ export const ContactForm: Story = {
                     resize: "vertical",
                   }}
                   onFocus={(e) => {
-                    e.currentTarget.style.borderColor = "var(--color-interactive-default)";
+                    e.currentTarget.style.borderColor =
+                      "var(--color-interactive-default)";
                   }}
                   onBlur={(e) => {
                     e.currentTarget.style.borderColor = errors.message
@@ -133,7 +149,12 @@ export const ContactForm: Story = {
                 )}
               </div>
 
-              <Button type="submit" variant="primary" size="lg" style={{ width: "100%" }}>
+              <Button
+                type="submit"
+                variant="primary"
+                size="lg"
+                style={{ width: "100%" }}
+              >
                 Send Message
               </Button>
             </Stack>
@@ -191,7 +212,9 @@ export const LoginForm: Story = {
                 label="Email"
                 type="email"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 error={errors.email}
                 placeholder="you@example.com"
               />
@@ -200,17 +223,27 @@ export const LoginForm: Story = {
                 label="Password"
                 type="password"
                 value={formData.password}
-                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, password: e.target.value })
+                }
                 error={errors.password}
                 placeholder="••••••••"
               />
 
-              <Button type="submit" variant="primary" size="lg" style={{ width: "100%" }}>
+              <Button
+                type="submit"
+                variant="primary"
+                size="lg"
+                style={{ width: "100%" }}
+              >
                 Sign In
               </Button>
 
               <Text size="sm" color="muted" style={{ textAlign: "center" }}>
-                <a href="#forgot" style={{ color: "var(--color-interactive-default)" }}>
+                <a
+                  href="#forgot"
+                  style={{ color: "var(--color-interactive-default)" }}
+                >
                   Forgot password?
                 </a>
               </Text>
@@ -221,4 +254,3 @@ export const LoginForm: Story = {
     );
   },
 };
-
