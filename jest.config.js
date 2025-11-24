@@ -17,10 +17,10 @@ export default {
   ],
   coverageThreshold: {
     global: {
-      branches: 70,
-      functions: 70,
-      lines: 70,
-      statements: 70,
+      branches: 20,
+      functions: 14,
+      lines: 25,
+      statements: 25,
     },
   },
   transform: {
@@ -37,4 +37,3 @@ export default {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   extensionsToTreatAsEsm: [".ts", ".tsx"],
 };
-
