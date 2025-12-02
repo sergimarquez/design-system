@@ -1,18 +1,21 @@
 # @sergi-marquez/design-system
 
-A modern, accessible design system built with React, TypeScript, and design tokens. This design system provides a collection of headless primitives and design tokens that can be used across projects.
+A modern, accessible design system built with React, TypeScript, and design tokens. This design system provides a collection of headless primitives and design tokens that can be used across projects to maintain consistency and accelerate development.
 
 ## Features
 
 - 🎨 **Design Tokens** - Framework-agnostic tokens (CSS custom properties + TypeScript constants)
 - ⚛️ **React Primitives** - Headless, accessible components built with React 18
 - 📖 **Storybook** - Interactive component documentation and playground
-- 🌐 **Demo Site** - Beautiful showcase site alongside Storybook
 - 🎨 **Themeable** - Customize colors via CSS variables or JavaScript API
 - ✅ **TypeScript** - Full type safety with strict mode
 - 🧪 **Testing** - Jest + React Testing Library
 - 📦 **Build System** - ESM + CJS + TypeScript declarations
 - ♿ **Accessibility** - WCAG compliant components
+
+## Live Demo
+
+🔗 **[View Storybook Documentation](https://sergimarquez.github.io/design-system/)** - Interactive component documentation and playground
 
 ## Installation
 
@@ -280,25 +283,6 @@ applyTheme({
 
 See the Theme Customization example in Storybook for interactive theme picker.
 
-## Demo Site
-
-A beautiful showcase site is available to demonstrate the design system:
-
-```bash
-# Run demo site
-npm run demo
-
-# Build demo site
-npm run demo:build
-```
-
-The demo site includes:
-
-- Landing page with hero section
-- Component showcase with live previews
-- Examples section
-- Responsive design
-
 ## Accessibility
 
 All components are built with accessibility in mind:
@@ -343,9 +327,6 @@ npm run test:watch
 # Start Storybook
 npm run storybook
 
-# Start demo site
-npm run demo
-
 # Build library
 npm run build
 
@@ -363,7 +344,7 @@ The project uses GitHub Actions for continuous integration and deployment:
   - Format verification
   - Full test suite with coverage
   - Library build verification
-  - Storybook and demo site builds
+  - Storybook build verification
 
 - **Release** - Automatically publishes to NPM when tags are pushed:
   - Runs full test suite
@@ -371,9 +352,7 @@ The project uses GitHub Actions for continuous integration and deployment:
   - Publishes to NPM
   - Creates GitHub release
 
-- **Deploy** - Automatically deploys documentation:
-  - Storybook deployed to GitHub Pages
-  - Demo site deployed alongside Storybook
+- **Deploy** - Automatically deploys Storybook to GitHub Pages on every push to main
 
 Workflows are located in `.github/workflows/`.
 
