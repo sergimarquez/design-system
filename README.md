@@ -15,7 +15,9 @@ A modern, accessible design system built with React, TypeScript, and design toke
 
 ## Live Demo
 
-🔗 **[View Storybook Documentation](https://sergimarquez.github.io/design-system/)** - Interactive component documentation and playground
+🔗 **[View Storybook Documentation](https://your-storybook-url.vercel.app)** - Interactive component documentation and playground
+
+_Deployed on Vercel - free hosting for static sites_
 
 ## Installation
 
@@ -352,9 +354,56 @@ The project uses GitHub Actions for continuous integration and deployment:
   - Publishes to NPM
   - Creates GitHub release
 
-- **Deploy** - Automatically deploys Storybook to GitHub Pages on every push to main
+- **Deploy** - Storybook can be deployed to Vercel (free hosting) - see deployment instructions below
 
 Workflows are located in `.github/workflows/`.
+
+## Deployment
+
+### Deploy Storybook to Vercel (Free)
+
+Vercel offers free hosting for static sites with automatic deployments from GitHub.
+
+**Quick Setup (Recommended):**
+
+1. **Push your code to GitHub:**
+
+   ```bash
+   git push origin main
+   ```
+
+2. **Go to [vercel.com](https://vercel.com) and sign up/login** (free account)
+
+3. **Import your GitHub repository:**
+   - Click "Add New" → "Project"
+   - Import `sergimarquez/design-system`
+   - Vercel will auto-detect settings from `vercel.json`
+
+4. **Configure build settings:**
+   - **Framework Preset:** Other
+   - **Build Command:** `npm run build-storybook`
+   - **Output Directory:** `storybook-static`
+   - **Install Command:** `npm ci`
+
+5. **Deploy:**
+   - Click "Deploy"
+   - Wait 1-2 minutes
+   - Your Storybook will be live at a URL like: `https://design-system-xxxxx.vercel.app`
+
+6. **Update README:**
+   - Replace the placeholder URL in this README with your actual Vercel URL
+   - The deployment will auto-update on every push to `main`
+
+**Alternative: Manual Deployment**
+
+You can also deploy manually using Vercel CLI:
+
+```bash
+npm i -g vercel
+vercel --prod
+```
+
+Follow the prompts and select the `storybook-static` directory when asked.
 
 ## Linking Locally
 
