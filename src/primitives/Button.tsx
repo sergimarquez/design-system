@@ -20,6 +20,7 @@ export default function Button({
   size = "md",
   disabled,
   className = "",
+  type = "button",
   ...props
 }: ButtonProps) {
   // Size styles
@@ -64,24 +65,47 @@ export default function Button({
       }
     : {};
 
+  // Merge custom styles but protect typography and padding
+  const customStyle = props.style || {};
+  const {
+    fontSize: _,
+    fontFamily: __,
+    fontWeight: ___,
+    padding: ____,
+    ...safeCustomStyle
+  } = customStyle;
+
+  // Remove style from props to prevent override
+  const { style: __style, ...restProps } = props;
+
   return (
     <button
-      type="button"
+      type={type}
       disabled={disabled}
       data-variant={variant}
       className={className}
       style={{
-        ...sizeStyles[size],
+        // Variant styles
         ...variantStyles[variant],
-        ...disabledStyles,
-        fontFamily: typographyTokens.fontFamily.sans,
-        fontWeight: typographyTokens.fontWeight.medium,
+        // Layout and visual styles
         borderRadius: borderTokens.radius.md,
         cursor: disabled ? "not-allowed" : "pointer",
         transition: "all 0.2s ease",
-        ...(props.style || {}),
+        boxSizing: "border-box",
+        border: variantStyles[variant].border || "none",
+        textAlign: "center",
+        lineHeight: "1.5",
+        // Disabled styles
+        ...disabledStyles,
+        // Allow custom styles for layout/positioning (but not typography or padding)
+        ...safeCustomStyle,
+        // Protected styles last - cannot be overridden
+        fontSize: sizeStyles[size].fontSize,
+        fontFamily: typographyTokens.fontFamily.sans,
+        fontWeight: typographyTokens.fontWeight.medium,
+        padding: sizeStyles[size].padding,
       }}
-      {...props}
+      {...restProps}
     >
       {children}
     </button>
